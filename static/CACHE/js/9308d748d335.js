@@ -1,0 +1,5 @@
+(function(){new syncAudioVideo('video1','audio1');var vid=document.getElementById('video1');alert(vid.currentTime());})();var ct=document.getElementById('video1');var currentTime=ct.currentTime;var cur_time=formatTime(currentTime).toString();setForum(cur_time);function setForum(cur_time)
+{var time_split=cur_time.split(".")
+var minute=parseFloat(time_split[0]);var min_range=minute+"-"+(minute+parseFloat(1))
+if(parseInt(time_split[1]).between(parseInt(0),parseInt(9))){sec_range="0-10"}else if(parseFloat(time_split[1]).between(parseFloat(10),parseFloat(19))){sec_range="10-20"}else if(parseFloat(time_split[1]).between(parseFloat(20),parseFloat(29))){sec_range="20-30"}else if(parseFloat(time_split[1]).between(parseFloat(30),parseFloat(39))){sec_range="30-40"}else if(parseFloat(time_split[1]).between(parseFloat(40),parseFloat(49))){sec_range="40-50"}else{sec_range="50-60"}
+var url="http://forums.spoken-tutorial.org/new-question/?category=Java&tutorial=Getting started java Installation&minute_range="+min_range+"&second_range="+sec_range;$("#text").attr("href",url);}

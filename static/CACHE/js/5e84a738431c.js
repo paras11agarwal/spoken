@@ -1,0 +1,5 @@
+$(document).ready(function(){currentVideo=$('.playlist-item.active');nextVideo=currentVideo.next('li');prevVideo=currentVideo.prev('li');var tmpHtml=currentVideo.attr('data')+'/'+$('.video-count').html()
+$('.video-count').html(tmpHtml)
+if(nextVideo.length){$('.forward').html('<a href="'+nextVideo.children('a').attr('href')+'"><i class="fa fa-1 fa-fast-forward"></i></a>');}else{$('.forward').html('<i class="fa fa-1 fa-fast-forward"></i>');}
+if(prevVideo.length){$('.backward').html('<a href="'+prevVideo.children('a').attr('href')+'"><i class="fa fa-1 fa-fast-backward"></i></a>');}else{$('.backward').html('<i class="fa fa-1 fa-fast-backward"></i>');}
+$(".fancybox").fancybox({maxWidth:500,maxHeight:485,fitToView:true,autoSize:false,closeClick:false,openEffect:"none",closeEffect:"none",modal:true,});$(".video-show-more").click(function(e){e.preventDefault();$(".video-info").slideToggle("slow");$(this).text($(this).text()=='Show video info'?"Hide video info":"Show video info");});});

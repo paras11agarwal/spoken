@@ -1,0 +1,52 @@
+{% extends 'spoken/templates/base.html' %}
+{% load widget_tweaks %}
+{% load static %}
+{% block title %}Login{% endblock %}
+{% block cssblock %}
+    <link rel="stylesheet" href="{% static 'spoken/css/login.css' %}" type="text/css" media="screen" charset="utf-8" />
+{% endblock %}
+{% block search %}
+{% endblock %}
+{% block content %}
+    <div id="loggit" class="img-rounded">
+        <h1><i class="fa fa-lock"></i> Login</h1>
+        <h3>Please <strong>Login</strong> or <strong>Register</strong></h3>
+        <br>
+        <form id="logForm" method="post" class="form-horizontal">{% csrf_token %}
+            <div class="form-group">
+                <div class="col-xs-12">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                        <input name="username" class="form-control" placeholder="Username" autocomplete="off" type="text" autofocus>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-12">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                        <input name="password" class="form-control" placeholder="Password" autocomplete="off" type="password">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group formSubmit">
+                <div class="col-sm-7">
+                    <div class="checkbox">
+                        <label>
+                            <input name="remember" autocomplete="off" type="checkbox"> Keep me logged in
+                        </label>
+                    </div>
+                </div>
+                <div class="col-sm-5 submitWrap">
+                    <button type="submit" class="btn btn-primary btn-lg">Log In</button>
+                </div>
+            </div>
+            <div class="form-group formNotice">
+                <div class="col-xs-12">
+                    <p class="text-center">Don't have an account? <span><a href="/accounts/register/">Register now</span></a></p>
+                    <p class="text-center"><span><a href="/accounts/forgot-password/">Forgot your password?</span></a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

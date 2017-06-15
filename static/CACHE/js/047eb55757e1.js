@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".fancybox-script").fancybox({maxWidth:1024,maxHeight:700,fitToView:true,autoSize:false,closeClick:false,openEffect:"none",closeEffect:"none",modal:true,afterClose:function(){return parent.location.reload(true);}});});
