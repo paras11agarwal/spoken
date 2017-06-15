@@ -1,1 +1,0 @@
-(function(){new syncAudioVideo('video1','audio1');alert("hello");})();

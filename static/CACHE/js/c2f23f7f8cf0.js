@@ -1,1 +1,0 @@
-$(document).ready(function(){$(".review-btn").hover(function(){$(this).children(0).addClass("fa-spin");},function(){$(this).children(0).removeClass("fa-spin");});});

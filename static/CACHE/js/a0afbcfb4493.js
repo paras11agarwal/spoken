@@ -1,1 +1,0 @@
-(function(){new syncAudioVideo('video1','audio1');var vid=document.getElementById('video1');alert(vid.currenTime());})();
